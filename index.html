@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.firebasedatabase.app wss://*.firebaseio.com wss://*.firebasedatabase.app; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="نظام مبيعات صيدلية درب الشفاء — نظام متكامل لإدارة الصيدلية"/>
+<title>نظام مبيعات صيدلية درب الشفاء</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Alexandria:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════ شاشة تسجيل الدخول ═══════════════ -->
+<div id="login-screen">
+  <div class="login-bg">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="login-head">
+    <div class="login-logo">
+      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="url(#lg1)" stroke-width="3.5"/><path d="M32 18v28M18 32h28" stroke="url(#lg1)" stroke-width="6" stroke-linecap="round"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#16a34a"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs></svg>
+    </div>
+    <h1 id="login-pharmacy-name">صيدلية درب الشفاء</h1>
+    <p>نظام المبيعات المتكامل</p>
+  </div>
+  <div id="accounts-row" class="accounts-row"></div>
+  <div class="login-foot">
+    <span id="login-clock"></span>
+    <span class="dot-sep"></span>
+    <span id="login-date"></span>
+  </div>
+</div>
+
+<!-- ═══════════════ التطبيق الرئيسي ═══════════════ -->
+<div id="app" class="hidden">
+  <header id="topbar">
+    <div class="tb-info">
+      <div class="tb-datetime glass-chip">
+        <span class="tb-day" id="tb-day"></span>
+        <span class="tb-date" id="tb-date"></span>
+        <span class="tb-clock" id="tb-clock"></span>
+      </div>
+      <div class="tb-employee glass-chip" id="tb-employee"></div>
+      <div class="tb-customer glass-chip" id="tb-customer"></div>
+      <button class="tb-logout" id="btn-logout" title="تسجيل الخروج"></button>
+    </div>
+    <div class="tb-brand">
+      <div class="tb-brand-text"><b id="tb-pharmacy-name">صيدلية درب الشفاء</b><span>نظام المبيعات المتكامل</span></div>
+      <div class="tb-logo">
+        <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="url(#tg1)" stroke-width="4"/><path d="M32 18v28M18 32h28" stroke="url(#tg1)" stroke-width="7" stroke-linecap="round"/><defs><linearGradient id="tg1" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#16a34a"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs></svg>
+      </div>
+    </div>
+  </header>
+
+  <div id="tabstrip">
+    <div id="tabs"></div>
+    <button id="tab-add" title="فتح نقطة بيع جديدة"></button>
+  </div>
+
+  <div id="main">
+    <aside id="sidebar">
+      <nav id="side-nav"></nav>
+      <div class="sidebar-foot">
+        <div class="sync-dot" id="sync-dot" title="حالة المزامنة"></div>
+        <span id="sync-label">وضع محلي</span>
+      </div>
+    </aside>
+    <section id="content"></section>
+  </div>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+
+<script src="firebase-config.js"></script>
+<script src="invoice-scanner.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
