@@ -9,12 +9,12 @@
    بدون هذه الإعدادات يعمل النظام 100% محلياً دون أي نقصان.
    ═══════════════════════════════════════════════════════════════ */
 window.FIREBASE_CONFIG = {
-  apiKey: "AIzaSyCtz6MiAPW5I1BDNqJXMe-q8CgOrsEFc1O",
-    authDomain: "healingpath-51637.firebaseapp.com",
-    databaseURL: "https://healingpath-51637-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "healingpath-51637",
-    storageBucket: "healingpath-51637.firebasestorage.app",
-    messagingSenderId: "247914857779",
-    appId: "1:247914857779:web:1c0e49c02d3ce6f109aa46",
-    measurementId: "G-J9RBTGLVV2"
+  apiKey: "AIzaSyDprG-AAwCAt6lbNjE3eFeEiFNlxS_5b4A",
+  authDomain: "healingpos-dccbc.firebaseapp.com",
+  databaseURL: "https://healingpos-dccbc-default-rtdb.firebaseio.com",
+  projectId: "healingpos-dccbc",
+  storageBucket: "healingpos-dccbc.firebasestorage.app",
+  messagingSenderId: "856839126552",
+  appId: "1:856839126552:web:b7fd00ff05b4f976ff4d6d",
+  measurementId: "G-YXW1RGM7S0"
 };
